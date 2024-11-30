@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            background-image: url('images/bgimage4.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        h1, h2, h3, p, ul, ol, li, a, table, td, th, blockquote, section {
+            font-family: "Times New Roman", serif;
+        }
+
+        nav table td a {
+            text-decoration: none; 
+            color: purple; 
+            background-color: transparent; 
+            display: block; 
+            padding: 10px;
+        }
+
+        nav table td a:hover {
+            text-decoration: underline; 
+            background-color: pink; 
+            color: white; 
+            transition: all 0.3s ease; 
+        }
+
+        section {
+            color: #fff; 
+            padding: 60px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-family: Times New Roman, serif;
+        }
+
+        footer p {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        footer p small {
+            font-size: 1em;
+            color: #555;
+        }
+
+    </style>
+</head>
+
+<body bgcolor="#D9ABAB">
+    <header>
+        <a href="index.html">
+            <center>
+                <img src="images/AN-removebg-preview.png" alt="Logo" style="width:250px; height:250px;" title="AN-Beyond the Surface">
+            </center>
+        </a>
+    </header>
+
+    <center><div id="clock" style="font-size: 24px; font-family: Arial, sans-serif; color: #333;"></div>
+
+    <script>
+        function updateClock() {
+            const clockElement = document.getElementById('clock');
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        setInterval(updateClock, 1000); 
+        updateClock(); 
+    </script></center>
+
+    <hr style="border: 1px solid #DD; width: 98.9%;">
+
+    <nav>
+        <table cellspacing="5" cellpadding="5">
+            <tr>
+                <td><a href="index.html">Home</a></td>
+                <td><a href="AboutMe.html">About Me</a></td>
+                <td><a href="WhatIDo.html">What I Do</a></td>
+                <td><a href="Gallery.html">Gallery</a></td>
+                <td><a href="GetInTouch.html">Get in Touch</a></td>
+            </tr>
+        </table>
+    </nav>
+    <hr style="border: 1px solid #DD; width: 98.9%;">
+
+<h2 style="color:#982B1C; margin-left: 20px; text-align: center;">Education</h2>
+
+<section style="margin-bottom: 20px; text-align: center; display: flex; align-items: center; justify-content: center;">
+    <div class="education-card" style="background-color: #FDDBBB; color: #3B1C32; padding: 20px; border-radius: 10px; display: inline-block; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out; width: 250px; margin-right: 15px;">
+        <i style="font-size: 40px; color: #D86E46;" class="fa fa-book"></i>
+        <h3 style="font-size: 1.3em; font-weight: bold; margin-top: 10px;">Primary Level</h3>
+        <p style="font-size: 1.1em; font-family: Arial, sans-serif;">Sekolah Rendah Agama Integrasi Seksyen 19 [UPSR]</p>
+    </div>
+    <div class="arrow" style="font-size: 2em; margin-left: 10px; margin-right: 10px; color: #D86E46;">&#8594;</div>
+
+    <div class="education-card" style="background-color: #FDDBBB; color: #3B1C32; padding: 20px; border-radius: 10px; display: inline-block; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out; width: 250px; margin-right: 15px;">
+        <i style="font-size: 40px; color: #D86E46;" class="fa fa-graduation-cap"></i>
+        <h3 style="font-size: 1.3em; font-weight: bold; margin-top: 10px;">Secondary Level</h3>
+        <p style="font-size: 1.1em; font-family: Arial, sans-serif;">Sekolah Menengah Kebangsaan Seksyen 19 [SPM]</p>
+    </div>
+    <div class="arrow" style="font-size: 2em; margin-left: 10px; margin-right: 10px; color: #D86E46;">&#8594;</div>
+
+    <div class="education-card" style="background-color: #FDDBBB; color: #3B1C32; padding: 20px; border-radius: 10px; display: inline-block; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out; width: 250px;">
+        <i style="font-size: 40px; color: #D86E46;" class="fa fa-university"></i>
+        <h3 style="font-size: 1.3em; font-weight: bold; margin-top: 10px;">University Level</h3>
+        <p style="font-size: 1.1em; font-family: Arial, sans-serif;">Universiti Teknologi Mara [Diploma]</p>
+    </div>
+</section>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<script>
+    const educationCards = document.querySelectorAll('.education-card');
+    educationCards.forEach(card => {
+        card.addEventListener('mouseover', () => {
+            card.style.transform = 'scale(1.05)';
+        });
+        card.addEventListener('mouseout', () => {
+            card.style.transform = 'scale(1)';
+        });
+    });
+</script>
+
+
+<h2 style="color:#982B1C; margin-left: 0;"><u>Academic Focuses</u></h2>
+
+<p style="color:#5D0E41; text-align: justify; padding-left: 20px; padding-right: 20px;">
+	Academic focuses cover a broad range of areas designed to enhance students' knowledge and skills. Key areas include research and analysis, where students gather and interpret data to form conclusions. Another focus is on technology and innovation, crucial for understanding and applying emerging tools and trends. Communication and collaboration are also central, with a focus on teamwork and effective interaction. Ethical considerations across disciplines teach students how to navigate moral challenges in their careers. Critical thinking and problem-solving develop the ability to analyze complex issues, while cultural awareness and global perspectives help students understand diverse viewpoints and global challenges. These academic focuses prepare students for both specialized and interdisciplinary careers. Apart from the desire to get excellent results in the academic field as all students dream of, manners in learning also need to be emphasized apart from the knowledge that we simply get.
+
+</p>
+
+<div style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+  <h3 style="color:#982B1C; margin-left: 20px;">Why Do I Chose This Course?...</h3>
+
+  <ol>
+    <li style="color:#800000; margin-bottom: 15px; text-align: left;">
+      <strong>Interest in Technology and Data:</strong> Information Management is crucial in a world driven by technology. It involves organizing, storing, and analyzing data to ensure it’s easily accessible and usable. If you have a curiosity about how information systems function, this course can provide you with the skills to handle modern data challenges.
+    </li>
+
+    <li style="color:#800000; margin-bottom: 15px; text-align: left;">
+      <strong>Career Opportunities:</strong> In the digital age, almost every industry needs professionals who understand how to manage information. This course opens doors to careers in data analysis, IT, digital marketing, archives, and more. The field's versatility can lead to many paths within the public and private sectors.
+    </li>
+
+    <li style="color:#800000; margin-bottom: 15px; text-align: left;">
+      <strong>Desire to Make an Impact:</strong> In today’s world, the efficient management of information can help solve big problems. Whether it’s through improving business processes, supporting research, or organizing vital resources, Information Management can have a direct positive impact on society and organizations.
+    </li>
+
+    <li style="color:#800000; margin-bottom: 15px; text-align: left;">
+      <strong>Building Useful Skills:</strong> Information Management offers a chance to gain technical and analytical skills such as database management, information retrieval, and system development. These skills are valuable in many modern careers and can be applicable in multiple disciplines.
+    </li>
+
+    <li style="color:#800000; margin-bottom: 15px; text-align: left;">
+      <strong>Solving Real-World Problems:</strong> Information management is all about solving practical issues related to data. If you’re someone who likes problem-solving and improving systems, this course will allow you to address everyday challenges in businesses, governments, and organizations.
+    </li>
+
+    <li style="color:#800000; margin-bottom: 15px; text-align: justify;">
+      <strong>Closer To Art:</strong> Choosing Information Management feels like an artistic journey where raw data is sculpted into meaningful insights. Just as an artist arranges colors to create harmony, I organize and curate data to tell a functional story. It's about transforming chaos into structure, shaping knowledge into something useful and accessible for others. This course allows me to combine creativity with problem-solving, crafting systems that not only store information but make it flow seamlessly for those who need it.
+    </li>
+  </ol>
+
+  <section style="padding: 20px 20px; font-family: Arial, sans-serif;">
+    <blockquote style="font-size: 1.2em; font-style: italic; color: #555; text-align: left; margin: 10px auto; max-width: 800px; border-left: 5px solid #F68989; padding: 20px 15px;">
+      "Skill is the unified force of experience, intellect, and passion in their operation." – John Ruskin
+    </blockquote>
+  </section>
+</div>
+
+
+<section style="padding: 40px; font-family: Arial, sans-serif;">
+    <h2 style="color: #740938; text-align: center;">Skills</h2>
+    <div style="max-width: 600px; margin: 20px auto;">
+
+        <div style="margin-bottom: 20px;">
+            <p style="margin: 0;">WORD</p>
+            <div style="width: 100%; height: 10px; background: #ddd; border-radius: 5px;">
+                <div style="width: 90%; height: 100%; background: #4caf50; border-radius: 5px;"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <p style="margin: 0;">EXEL</p>
+            <div style="width: 100%; height: 10px; background: #ddd; border-radius: 5px;">
+                <div style="width: 80%; height: 100%; background: #2196f3; border-radius: 5px;"></div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <p style="margin: 0;">JavaScript</p>
+            <div style="width: 100%; height: 10px; background: #ddd; border-radius: 5px;">
+                <div style="width: 60%; height: 100%; background: #ff9800; border-radius: 5px;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 40px; font-family: Arial, sans-serif;">
+    <div style="max-width: 800px; margin: 20px auto;">
+
+<h3 style="margin-bottom: 10px; color: #333; font-family: 'Times New Roman', serif; font-style: italic;">
+    <sub>Technical</sub> <sup>Skills</sup>
+</h3>
+        <ul style="list-style: none; padding: 0;">
+            <li style="margin: 10px 0; border: 1px solid #ddd; padding: 10px; border-radius: 5px; color: #3B1C32;">HTML, CSS, JavaScript</li>
+            <li style="margin: 10px 0; border: 1px solid #ddd; padding: 10px; border-radius: 5px; color: #3B1C32;">Information Management Systems</li>
+        </ul>
+
+<h3 style="margin-bottom: 10px; color: #333; font-family: 'Times New Roman', serif; font-style: italic;">
+    <sub>Creative</sub> <sup>Skills</sup>
+</h3>	
+	<ul style="list-style: none; padding: 0;">
+            <li style="margin: 10px 0; border: 1px solid #ddd; padding: 10px; border-radius: 5px; color: #3B1C32;">Infographic Design</li>
+            <li style="margin: 10px 0; border: 1px solid #ddd; padding: 10px; border-radius: 5px; color: #3B1C32;">Canva and Graphic Tools</li>
+	</ul>
+
+
+<h3 style="margin-bottom: 10px; color: #333; font-family: 'Times New Roman', serif; font-style: italic;">
+    <sub>Soft</sub> <sup>Skills</sup>
+</h3>        
+	<ul style="list-style: none; padding: 0;">
+            <li style="margin: 10px 0; border: 1px solid #ddd; padding: 10px; border-radius: 5px; color: #3B1C32;">Problem-Solving</li>
+            <li style="margin: 10px 0; border: 1px solid #ddd; padding: 10px; border-radius: 5px; color: #3B1C32;">Team Collaboration</li>
+        </ul>
+    </div>
+</section>
+
+
+
+<h2 style="color: #740938; margin-left: 8px;"><strong>My Experience</strong></h2>
+
+    <section style="background-color: #F5EFFF; padding: 30px; margin: auto; max-width: 1000px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+        <h2 style="color: #007bff; text-align: center;">Internship Student at UiTM Shah Alam Library</h2>
+        <h3 style="color: #555; text-align: center;">Duration: July 2024 - September 2024</h3>
+	<p style="color:#133E87; text-align: justify;">
+            During my time as a Internship Student at UiTM Shah Alam Library, I was responsible for organizing and maintaining library resources, 
+            assisting students with book searches, and ensuring the smooth operation of daily library activities. This experience improved my 
+            organizational skills and taught me the importance of effective resource management in an academic setting.
+        </p>
+    </section>
+
+<section style="padding: 40px; font-family: Arial, sans-serif;">
+    <h2 style="color: #740938; text-align: center;">Future Goals</h2>
+    <ul style="list-style: none; padding: 0; max-width: 600px; margin: 20px auto;">
+
+        <li style="margin: 15px 0; padding: 10px; border: 1px solid #ddd; border-radius: 5px; cursor: pointer;" 
+            onmouseover="this.style.background='#f0f8ff';" 
+            onmouseout="this.style.background='maroon';">
+            <strong>Develop Emotional Intelligence</strong> - Focus on improving my self-awareness and empathy for better relationships with others.
+        </li>
+        
+        <li style="margin: 15px 0; padding: 10px; border: 1px solid #ddd; border-radius: 5px; cursor: pointer;" 
+            onmouseover="this.style.background='#f0f8ff';" 
+            onmouseout="this.style.background='maroon';">
+            <strong>Prioritize Mental Health</strong> - Start doing any sport or journaling to reduce stress and focus on my mental well-being.
+        </li>
+        
+        <li style="margin: 15px 0; padding: 10px; border: 1px solid #ddd; border-radius: 5px; cursor: pointer;" 
+            onmouseover="this.style.background='#f0f8ff';" 
+            onmouseout="this.style.background='maroon';">
+            <strong>Graduate with Honors</strong> - Set a goal to achieve a high GPA or academic distinction in my studies.
+        </li>
+    </ul>
+</section>
+
+  <title>Interactive School Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #D9ABAB;
+    }
+    h1 {
+      text-align: center;
+      color: #6A1E55;
+      margin: 20px 0;
+    }
+    #map {
+      height: 500px;
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>My Education Journey: Map</h1>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([3.0511845, 101.5304366], 13); // Default view (Shah Alam)
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    const schools = [
+      {
+        name: "Sekolah Rendah Agama Integrasi Seksyen 19",
+        lat: 3.053098,
+        lng: 101.532185,
+        description: "This is where I started my education journey, focusing on academic and Islamic teachings."
+      },
+      {
+        name: "Sekolah Menengah Kebangsaan Seksyen 19",
+        lat: 3.0511845,
+        lng: 101.5330115,
+        description: "My secondary school, where I developed leadership skills and academic foundations."
+      },
+      {
+        name: "UiTM Segamat Campus",
+        lat: 2.4978,
+        lng: 102.8219,
+        description: "Currently pursuing my Diploma in Information Management here at UiTM Segamat."
+      }
+    ];
+
+    schools.forEach(school => {
+      const marker = L.marker([school.lat, school.lng]).addTo(map);
+      marker.bindPopup(`<b>${school.name}</b><br>${school.description}`);
+    });
+  </script>
+</body>
+</html>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #D9ABAB;
+      color: #FBFBFB;
+      margin: 0;
+      padding: 0;
+    }
+    h2, h3 {
+      color: #740938;
+      text-align: center;
+    }
+    .school-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 40px auto;
+      flex-wrap: wrap; 
+    }
+    .school {
+      background-color: #A888B5;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 350px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .school img {
+      width: 100%;
+      height: auto;
+      border-bottom: 2px solid #6A1E55;
+    }
+    .school-caption {
+      color: #6A1E55;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .school-description {
+      padding: 15px;
+      font-size: 14px;
+      text-align: justify;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    @media (max-width: 768px) {
+      .school-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .school {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2><strong><i>My Education Journey</i></strong></h2>
+  <div class="school-container">
+    <div class="school">
+      <a href="https://www.google.com/maps/place/SRA+Integrasi+Seksyen+19/@3.053098,101.5296103,17z/data=!3m1!4b1!4m6!3m5!1s0x31cc4d5c77455645:0xd6ee94a9c35d6c86!8m2!3d3.0530926!4d101.5321852!16s%2Fg%2F11bx1b81dk?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D" target="_blank">
+        <img src="images/SRAI.jpg" alt="SRAI S19">
+      </a>
+      <p class="school-caption">SEKOLAH RENDAH AGAMA INTEGRASI SEKSYEN 19, SHAH ALAM</p>
+      <p class="school-description">
+        I had the privilege of attending SRAI S19 Shah Alam, a school that played a significant role in shaping my values and character. Known for its balanced approach to education, SRAI S19 combines academic excellence with a strong foundation in Islamic teachings and moral values.
+      </p>
+    </div>
+
+    <div class="school">
+      <a href="https://www.google.com/maps/place/SMK+Seksyen+19/@3.0511845,101.5304366,17z/data=!3m1!4b1!4m6!3m5!1s0x31cc4d5dbc50246b:0x22cdeb68a32490a0!8m2!3d3.0511791!4d101.5330115!16s%2Fg%2F120_gcv0?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D" target="_blank">
+        <img src="images/SMKS.jpg" alt="SMK S19">
+      </a>
+      <p class="school-caption">SEKOLAH MENENGAH KEBANGSAAN SEKSYEN 19, SHAH ALAM</p>
+      <p class="school-description">
+        My secondary education at SMKS S19 Shah Alam shaped my academic and personal growth. This school fostered excellence, encouraging me to explore my potential and take on challenges while building valuable skills like teamwork and leadership.
+      </p>
+    </div>
+
+    <div class="school">
+      <a href="https://www.google.com/maps?sca_esv=ecacba330ca1712d&biw=1536&bih=695&output=search&q=uitm+segamat&source=lnms&fbs=AEQNm0DJ7g6q1SUpTw4cD2HgLJVNRSArBxGu_ua2vi8N_Eq2Htb-b-hsxqkOqSkjifzU4-L3N5ih9qz3D2f3gXwKdOzMlpHEQDYS64g0eC04L69vS7fFw6uIh6DIkMQ1nLka4AXsjuXWIvGu69b2nJSO6-XPo9x2DCzQqPUwy_tsFLAUo1cZwU9H9IueadZOnp9NZShIIl5oOfSwviCrM1DTD83Nt4WrEA&entry=mc&ved=1t:200715&ictx=111" target="_blank">
+        <img src="images/uitmcj.jpg" alt="UiTM Segamat">
+      </a>
+      <p class="school-caption">UiTM SEGAMAT, JOHOR</p>
+      <p class="school-description">
+        Currently pursuing a Diploma in Information Management at UiTM Segamat. This program is equipping me with theoretical knowledge and practical skills in data handling, systems, and technology for a career in information science.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
+
+    <footer style="text-align: center; margin-top: 0px;">
+        <p>&copy; 2024 Anis's Website | Made with ♡</p>
+    </footer>
+
+
+
+
+</body>
+</html>

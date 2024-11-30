@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            background-image: url('images/bgimage4.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        h1, h2, h3, p, ul, ol, li, a, table, td, th, blockquote, section {
+            font-family: "Times New Roman", serif;
+        }
+
+        nav table td a {
+            text-decoration: none; 
+            color: purple; 
+            background-color: transparent; 
+            display: block; 
+            padding: 10px;
+        }
+
+        nav table td a:hover {
+            text-decoration: underline; 
+            background-color: pink; 
+            color: white; 
+            transition: all 0.3s ease; 
+        }
+
+        section {
+            color: #fff; 
+            padding: 60px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-family: Times New Roman, serif;
+        }
+
+        footer p {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        footer p small {
+            font-size: 1em;
+            color: #555;
+        }
+
+    </style>
+</head>
+
+<body bgcolor="#D9ABAB">
+    <header>
+        <a href="index.html">
+            <center>
+                <img src="images/AN-removebg-preview.png" alt="Logo" style="width:250px; height:250px;" title="AN-Beyond the Surface">
+            </center>
+        </a>
+    </header>
+
+    <center><div id="clock" style="font-size: 24px; font-family: Arial, sans-serif; color: #333;"></div>
+
+    <script>
+        function updateClock() {
+            const clockElement = document.getElementById('clock');
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        setInterval(updateClock, 1000); 
+        updateClock(); 
+    </script></center>
+
+    <hr style="border: 1px solid #DD; width: 98.9%;">
+
+    <nav>
+        <table cellspacing="5" cellpadding="5">
+            <tr>
+                <td><a href="index.html">Home</a></td>
+                <td><a href="AboutMe.html">About Me</a></td>
+                <td><a href="WhatIDo.html">What I Do</a></td>
+                <td><a href="Gallery.html">Gallery</a></td>
+                <td><a href="GetInTouch.html">Get in Touch</a></td>
+            </tr>
+        </table>
+    </nav>
+    <hr style="border: 1px solid #DD; width: 98.9%;">
+
+
+<h2 style="color:#982B1C; margin-left: 20px;"><i>About Me ʚɞ</i></h2>
+
+
+<p style="color:#8E3E63; text-align: justify; padding-left: 20px; padding-right: 20px;">
+
+I am deeply passionate about record management and information systems, recognizing their vital role in organizing, safeguarding, and optimizing data for informed decision-making. With a solid academic foundation in Information Management, I have developed a strong understanding of how to efficiently handle and preserve information in a digital and physical context.
+
+I thrive in collaborative environments, where teamwork and open communication foster innovation and productivity. I enjoy tackling problem-solving challenges, as they allow me to apply critical thinking and creativity to find effective solutions. Whether it’s streamlining processes, analyzing complex data, or implementing organizational strategies, I am driven to make a meaningful impact. 
+
+</p>
+
+
+    <title>Interactive Timeline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #D9ABAB;
+            color: #333;
+        }
+
+        .timeline {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .timeline h1 {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .timeline-container {
+            position: relative;
+            margin: 20px 0;
+            padding-left: 50px;
+        }
+
+        .timeline-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 30px;
+            width: 4px;
+            height: 100%;
+            background-color: #555;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s, opacity 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .timeline-item:hover {
+            transform: scale(1.05);
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            top: 20px;
+            width: 15px;
+            height: 15px;
+            background-color: #555;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px #555;
+        }
+
+        .timeline-content h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #222;
+        }
+
+        .timeline-content p {
+            margin: 5px 0 0;
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline">
+        <center><h2>My Journey</h2></center>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>2004</h2>
+                    <p>Born in Klang, Malaysia</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>2010</h2>
+                    <p>Started schooling at SRAI S19 Shah Alam</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>2023</h2>
+                    <p>Graduated from SMKS S19 Shah Alam</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>2023</h2>
+                    <p>Began studying at UiTM, Diploma in Information Management</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('scroll', () => {
+            const items = document.querySelectorAll('.timeline-item');
+            const windowHeight = window.innerHeight;
+            
+            items.forEach(item => {
+                const position = item.getBoundingClientRect().top;
+                if (position < windowHeight - 100) {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                }
+            });
+        });
+    </script>
+
+<section style="margin-bottom: 20px;">
+        <h2 style="background-color: #FFE3E3; color: #8E3E63; padding: 10px;">My Aspirations</h2>
+    <ul>
+        <li><strong>Career Growth:</strong> To excel in my field and make a positive impact in my work.</li>
+        <li><strong>Personal Development:</strong> To continually challenge myself and embrace new experiences.</li>
+        <li><strong>Giving Back:</strong> To contribute to causes that align with my passions and values.</li>
+        <li><strong>Global Exploration:</strong> To travel and expand my understanding of the world.</li>
+    </ul>
+</section>
+
+<center><h2 style=color:#740938><strong><i>Hobby</i></strong></h2></center>
+<div style="display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: nowrap; margin-top: 20px; margin-bottom: 70px;">
+
+    <div style="background: #FAF7F0; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); width: 200px; padding: 30px; text-align: center;">
+        <div style="font-size: 40px; color: #4CAF50; margin-bottom: 10px;">
+            <img src="images/movie.jpeg" alt="Movie" style="width: 200px; height: 250px;">
+		<p style="color: #C96868; font-size: 16px;">Watching movies together.</p>
+        </div>
+    </div>
+
+    <div style="background: #FAF7F0; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); width: 200px; padding: 30px; text-align: center;">
+        <div style="font-size: 40px; color: #4CAF50; margin-bottom: 10px;">
+            <img src="images/travel.jpeg" alt="Travelling" style="width: 200px; height: 250px;">
+		<p style="color: #C96868; font-size: 16px;">Travelling with la familia.</p>
+        </div>
+    </div>
+
+    <div style="background: #FAF7F0; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); width: 200px; padding: 30px; text-align: center;">
+        <div style="font-size: 40px; color: #4CAF50; margin-bottom: 10px;">
+            <img src="images/sport.jpeg" alt="Sport" style="width: 200px; height: 250px;">
+		<p style="color: #C96868; font-size: 16px;">Sport to increase health.</p>
+        </div>
+    </div>
+
+    <div style="background: #FAF7F0; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); width: 200px; padding: 30px; text-align: center;">
+        <div style="font-size: 40px; color: #4CAF50; margin-bottom: 10px;">
+            <img src="images/driving.jpeg" alt="Driving" style="width: 200px; height: 250px;">
+		<p style="color: #C96868; font-size: 16px;">Driving and spend time.</p>
+        </div>
+    </div>
+</div>
+
+<section style="background: linear-gradient(135deg, #CA7373, #FFB0B0); padding: 10px; border-radius: 8px; margin: 50px; text-align: center; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);">
+    <h2 style="font-family: 'Cursive', 'Times New Roman', serif; color: #FFFFFF; font-size: 18px; line-height: 1.5; margin-bottom: 15px; text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);">
+        Art, travel, and a touch of frosting—my recipe for bliss.
+    </h2>
+    <div style="border-top: 2px solid #FFFFFF; width: 50%; margin: 10px auto;"></div>
+</section>
+
+<h2 style="color: #740938; margin-left: 228px;"><strong><b>Favourite ☆</b></strong></h2>
+
+<style>
+    table td {
+        color: #8E3E63; 
+    }
+</style>
+
+<table style="width: 70%; border-collapse: collapse; margin: 20px auto 50px; color: #FBFBFB; text-align: center;">
+    <thead>
+        <tr style="background-color: #D20062; color: #FFF;">
+            <th style="padding: 10px; border: 1px solid #FBFBFB;">FOOD</th>
+            <th style="padding: 10px; border: 1px solid #FBFBFB;">BEVERAGE</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #FBFBFB;">Pastas</td>
+            <td style="padding: 10px; border: 1px solid #FBFBFB;">Jasmine Tea</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #FBFBFB;">Gulai Masak Lemak Cili Api Ketam</td>
+            <td style="padding: 10px; border: 1px solid #FBFBFB;">Iced Coffee</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #FBFBFB;">Sushi</td>
+            <td style="padding: 10px; border: 1px solid #FBFBFB;">Teh Tarik</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #FBFBFB;">Char Kuey Teow</td>
+            <td style="padding: 10px; border: 1px solid #FBFBFB;">Fresh Coconut Water</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<section style="padding: 20px; text-align: center; margin: 30px auto; max-width: 100%;">
+    <h2 style="color: #FF0080; font-family: Arial, sans-serif;">˗ˏˋAll Time Favorite Movies ´ˎ˗</h2>
+    <div style="display: flex; flex-wrap: nowrap; justify-content: center; gap: 20px; margin-top: 20px; overflow-x: auto; padding-bottom: 10px;">
+        <div>
+            <img src="gif/mov1_.gif" alt="Image 1" style="width: 250px; height: auto; border-radius: 8px;">
+            <p style="color: #555; font-size: 14px; margin-top: 10px;">10 Things I Hate About You</p>
+        </div>
+        <div>
+            <img src="gif/Princess diary.gif" alt="Image 2" style="width: 250px; height: auto; border-radius: 8px;">
+            <p style="color: #555; font-size: 14px; margin-top: 10px;">Princess Diary</p>
+        </div>
+        <div>
+            <img src="gif/mov2_.gif" alt="Image 3" style="width: 250px; height: auto; border-radius: 8px;">
+            <p style="color: #555; font-size: 14px; margin-top: 10px;">How To Lose A Guy In 10 Days</p>
+        </div>
+        <div>
+            <img src="gif/mov4_.gif" alt="Image 4" style="width: 250px; height: auto; border-radius: 8px;">
+            <p style="color: #555; font-size: 14px; margin-top: 10px;">Monte Carlo</p>
+        </div>
+        <div>
+            <img src="gif/mov5_.gif" alt="Image 5" style="width: 250px; height: auto; border-radius: 8px;">
+            <p style="color: #555; font-size: 14px; margin-top: 10px;">13 Going On 30</p>
+        </div>
+    </div>
+</section>
+
+
+    <ul> 
+        <h3 style="color:#561C24; font-size: 1em; font-family: Times New Roman, serif;"><i>What is my favorite genre of songs?</i></h3>
+        <li style="color:#6D2932; font-size: 1em; font-family: Times New Roman, serif;">Pop</li>
+        <li style="color:#6D2932; font-size: 1em; font-family: Times New Roman, serif;">HipHop</li>
+        <li style="color:#6D2932; font-size: 1em; font-family: Times New Roman, serif;">R&B/Soul</li>
+        <li style="color:#6D2932; font-size: 1em; font-family: Times New Roman, serif;">Kpop</li>
+    </ul>
+
+<section style="padding: 20px; text-align: center; border-radius: 8px; margin: 10px auto; max-width: 600px; background-color: #FFF5F5; border: 2px solid #E57373;">
+    <h2 style="color: #C62828;">My Top 3 Recent *✧･ﾟ</h2>
+
+    <div style="margin-bottom: 20px; border: 2px solid #EF9A9A; padding: 10px; border-radius: 8px; background-color: #FFEBEE;">
+        <audio controls style="width: 100%; max-width: 500px; border-radius: 5px;">
+            <source src="audio/Misha Omar - Sampai Bila (Lyric Video).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p style="margin: 10px 0 0; font-size: 14px; color: #B71C1C;">Misha Omar - Sampai Bila</p>
+    </div>
+
+    <div style="margin-bottom: 20px; border: 2px solid #EF9A9A; padding: 10px; border-radius: 8px; background-color: #FFEBEE;">
+        <audio controls style="width: 100%; max-width: 500px; border-radius: 5px;">
+            <source src="audio/SZA - Nobody Gets Me (Official Video).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p style="margin: 10px 0 0; font-size: 14px; color: #B71C1C;">SZA - Nobody Gets Me</p>
+    </div>
+
+    <div style="margin-bottom: 20px; border: 2px solid #EF9A9A; padding: 10px; border-radius: 8px; background-color: #FFEBEE;">
+        <audio controls style="width: 100%; max-width: 500px; border-radius: 5px;">
+            <source src="audio/Post Malone, Swae Lee - Sunflower (Spider-Man_ Into the Spider-Verse) (Official Video).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p style="margin: 10px 0 0; font-size: 14px; color: #B71C1C;">Post Malone, Swae Lee - Sunflower</p>
+    </div>
+</section>
+
+
+    <footer style="text-align: center; margin-top: 0px;">
+        <p>&copy; 2024 Anis's Website | Made with ♡</p>
+    </footer>
+
+</body>
+</html>

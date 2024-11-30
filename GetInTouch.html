@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get In Touch</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            background-image: url('images/bgimage4.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        h1, h2, h3, p, ul, ol, li, a, table, td, th, blockquote, section {
+            font-family: "Times New Roman", serif; 
+        }
+
+        nav {
+            display: block; 
+            text-align: left;
+        }
+
+        nav table td a {
+            text-decoration: none; 
+            color: purple; 
+            background-color: transparent; 
+            display: block; 
+            padding: 10px;
+        }
+
+        nav table td a:hover {
+            text-decoration: underline; 
+            background-color: pink; 
+            color: white; 
+            transition: all 0.3s ease; 
+        }
+
+        h1 {
+            text-align: left;
+            font-size: 2.5em;
+        }
+
+        .container {
+            width: min(1000px, 100%);
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            background-color: #E7CCCC; 
+            box-shadow: 
+                0.7px 0.5px 2.2px rgba(0, 0, 0, 0.02),
+                1.8px 1.3px 5.3px rgba(0, 0, 0, 0.028),
+                3.4px 2.4px 10px rgba(0, 0, 0, 0.035),
+                6px 4.2px 17.9px rgba(0, 0, 0, 0.042),
+                11.3px 7.9px 33.4px rgba(0, 0, 0, 0.05),
+                27px 19px 80px rgba(0, 0, 0, 0.07);
+        }
+
+        .forms {
+            background-color: #E7CCCC;
+            padding: 3%;
+            width: 100%;
+            color: #F8F0E5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .forms h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .forms input[type="text"],
+        .forms input[type="email"],
+        .forms textarea {
+            width: 100%;
+            padding: 12px 10px;
+            border: none;
+            outline: none;
+            font-weight: bold;
+            margin: 10px 0;
+            resize: none;
+            background-color: #F8F0E5;
+            color: #0F2C59;
+            border-bottom: 2px solid #D76C82;
+        }
+
+        .forms textarea {
+            height: 100px;
+        }
+
+        .forms button {
+            padding: 10px 20px;
+            background-color: transparent;
+            color: #9A7E6F;
+            border: 2px solid #D76C82;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .forms button:hover {
+            background-color: #D76C82;
+            color: #0F2C59;
+        }
+
+        .info {
+            background-color: #C1CFA1;
+            padding: 4%;
+            width: 50%;
+            color: #FFF8DB;
+        }
+
+        .info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info ul li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .info ul li img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .info ul li .text span {
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-family: Times New Roman, serif;
+        }
+
+        footer p {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        footer p small {
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* Social Media Links - CSS */
+        ul.social-media-links {
+            list-style: none;
+            padding: 0;
+            display: flex; /* Flexbox to display items in a row */
+            justify-content: center; /* Center the icons horizontally */
+            gap: 20px; /* Space between icons */
+        }
+
+        ul.social-media-links li {
+            display: inline-block; /* Ensures icons stay aligned in a row */
+        }
+
+        .social-media img {
+            width: 40px; /* Set icon size */
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-media img:hover {
+            transform: scale(1.1); /* Slight zoom effect on hover */
+        }
+    </style>
+</head>
+
+<body bgcolor="#D9ABAB">
+
+<body>
+    <header>
+        <a href="index.html">
+            <center>
+                <img src="images/AN-removebg-preview.png" alt="Logo" style="width:250px; height:250px;" title="AN-Beyond the Surface">
+            </center>
+        </a>
+    </header>
+
+    <center><div id="clock" style="font-size: 24px; font-family: Arial, sans-serif; color: #333;"></div></center>
+
+    <script>
+        function updateClock() {
+            const clockElement = document.getElementById('clock');
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        setInterval(updateClock, 1000); 
+        updateClock(); 
+    </script>
+
+    <hr style="border: 1px solid #DD; width: 98.9%;"> 
+
+    <nav>
+        <table cellspacing="5" cellpadding="5" align="left">
+            <tr>
+                <td><a href="index.html">Home</a></td>
+                <td><a href="AboutMe.html">About Me</a></td>
+                <td><a href="WhatIDo.html">What I Do</a></td>
+                <td><a href="Gallery.html">Gallery</a></td>
+                <td><a href="GetInTouch.html">Get in Touch</a></td>
+            </tr>
+        </table>
+    </nav>
+
+    <hr style="border: 1px solid #DD; width: 98.9%;"> 
+
+    <div class="container">
+        <div class="forms">
+            <h2 style="color:#740938;">Send a message</h2>
+            <form action="#" method="POST">
+                <input type="text" id="name" name="name" placeholder="Name" required><br>
+                <input type="email" id="email" name="email" placeholder="Email" required><br>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required><br>
+                <textarea id="message" name="message" placeholder="Write something..." required></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+        <div class="info">
+            <div class="header">
+                <h1>Contact Me Here!</h1>
+                <p>For any further enquiries, just message me below.</p>
+            </div>
+            <div class="body">
+                <ul>
+                    <li>
+                        <img src="images/email.png" alt="Email">
+                        <div class="text"><span>Email:</span> anissyuhada402@gmail.com</div>
+                    </li>
+                    <li>
+                        <img src="images/home.png" alt="Location">
+                        <div class="text"><span>Address:</span> Ampang, Malaysia</div>
+                    </li>
+                    <li>
+                        <img src="images/telephone-call.png" alt="Phone">
+                        <div class="text"><span>Phone:</span> 0135067360</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<ul class="social-media-links">
+    <li>
+        <div class="social-media">
+            <a href="https://www.tiktok.com/@ansyhd4?lang=en" target="_blank">
+                <img src="images/tt3.jpg" alt="Tiktok">
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="social-media">
+            <a href="https://www.pinterest.com/anissyuhada402/" target="_blank">
+                <img src="images/p1.jpg" alt="Pinterest">
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="social-media">
+            <a href="https://www.instagram.com/anissazln/?next=%2F" target="_blank">
+                <img src="images/ig1.jpg" alt="Instagram">
+            </a>
+        </div>
+    </li>
+</ul>
+
+
+    <footer>
+        <p>&copy; 2024 Anis's Website | Made with ♡</p>
+    </footer>
