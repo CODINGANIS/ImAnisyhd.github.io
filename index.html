@@ -63,7 +63,33 @@
 
     </style>
 </head>
+<body>
+    <div id="dateDisplay" style="
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #FADADD;
+        color: #6A1E55;
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-size: 1em;
+        font-family: 'Times New Roman', serif;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    "></div>
 
+    <script>
+        function updateDate() {
+            const dateElement = document.getElementById('dateDisplay');
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const currentDate = now.toLocaleDateString('en-US', options);
+            dateElement.textContent = currentDate;
+        }
+
+        updateDate(); // Run once when the page loads
+    </script>
+    
 <body bgcolor="#D9ABAB">
 
     <header>
