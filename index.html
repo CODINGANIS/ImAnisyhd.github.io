@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            background-image: url('images/bgimage4.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        h1, h2, h3, p, ul, ol, li, a, table, td, th, blockquote, section {
+            font-family: "Times New Roman", serif;
+        }
+
+        nav table td a {
+            text-decoration: none; 
+            color: purple; 
+            background-color: transparent; 
+            display: block; 
+            padding: 10px;
+        }
+
+        nav table td a:hover {
+            text-decoration: underline; 
+            background-color: pink; 
+            color: white; 
+            transition: all 0.3s ease; 
+        }
+
+        section {
+            color: #fff; 
+            padding: 60px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-family: Times New Roman, serif;
+        }
+
+        footer p {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        footer p small {
+            font-size: 1em;
+            color: #555;
+        }
+
+    </style>
+</head>
+
+<body bgcolor="#D9ABAB">
+
+    <header>
+        <a href="index.html">
+            <center>
+                <img src="images/AN-removebg-preview.png" alt="Logo" style="width:250px; height:250px;" title="AN-Beyond the Surface">
+            </center>
+        </a>
+    </header>
+
+    <center><div id="clock" style="font-size: 24px; font-family: Arial, sans-serif; color: #333;"></div>
+
+    <script>
+        function updateClock() {
+            const clockElement = document.getElementById('clock');
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        setInterval(updateClock, 1000); 
+        updateClock(); 
+    </script></center>
+
+    <hr style="border: 1px solid #DD; width: 98.9%;">
+
+    <nav>
+        <table cellspacing="5" cellpadding="5">
+            <tr>
+                <td><a href="index.html">Home</a></td>
+                <td><a href="AboutMe.html">About Me</a></td>
+                <td><a href="WhatIDo.html">What I Do</a></td>
+                <td><a href="Gallery.html">Gallery</a></td>
+                <td><a href="GetInTouch.html">Get in Touch</a></td>
+            </tr>
+        </table>
+    </nav>
+    <hr style="border: 1px solid #DD; width: 98.9%;">
+
+    <div style="display: flex; height: 55vh; padding: 0 10px; box-sizing: border-box;">
+        <div style="flex: 1; display: flex; justify-content: center; align-items: center; background-color: #C75B7A;">
+            <img src="images/me.jpg" alt="Meself" style="max-width: 60%; height: auto; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        </div>
+        <div style="flex: 1; display: flex; justify-content: center; align-items: center; background-color: #921A40; color: white; text-align: center;">
+            <div>
+                <h1 style="font-size: 2.5em; margin-bottom: 20px;">Welcome to My Website</h1>
+                <p style="font-size: 1.1em; margin-bottom: 20px;">Hi There, I'm Anis. This is where I share my journey, work, and ideas. Feel free to explore!</p>
+                <a href="AboutMe.html" style="background-color: #D6C0B3; padding: 10px 20px; color: white; text-decoration: none;">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color:#ECDFCC; text-align: center; font-size: 150%;">
+        <h2>Self Introduction</h2>
+    </div>
+
+    <p style="margin: 0 20px; text-align: center; color:#091057;">
+        Hi, I’m Anis! I’m someone who loves exploring new ideas and learning about the world around me. Over the years, I’ve had the chance to grow through different experiences that shaped who I am today. Whether it’s through my work, hobbies, or personal projects, I enjoy discovering new things and sharing what I learn with others. 
+    </p>
+
+    <ul> 
+        <h3 style="color:#561C24; font-size: 1em; font-family: Times New Roman, serif;"><i>How do I define success for myself?</i></h3>
+        <li style="color:#6D2932; font-size: 1em; font-family: Times New Roman, serif;">Growth and Learning</li>
+        <p>Continuously improving myself and learning from every experience, whether it’s a success or a challenge.</p>
+        <li style="color:#6D2932; font-size: 1em; font-family: Times New Roman, serif;">Fulfillment</li>
+        <p>Feeling satisfied and happy with what I’m doing and finding joy in the process, not just the outcome.</p>
+        <li style="color:#6D2932; font-size: 1em; font-family: Times New Roman, serif;">Purpose</li>
+        <p>Waking up each day with a clear sense of direction and knowing I’m working towards something meaningful.</p>
+        <li style="color:#6D2932; font-size: 1em; font-family: Times New Roman, serif;">Staying True to Values</li>
+        <p>Achieving goals while remaining authentic and aligned with my personal beliefs and principles.</p>
+        <li style="color:#6D2932; font-size: 1em; font-family: Times New Roman, serif;">Balance</li>
+        <p>Maintaining harmony between my personal life, professional ambitions, and self-care.</p>
+    </ul>
+
+
+    <center>
+        <h2 style="color:#640D5F; font-size: 1.5em; font-family: Times New Roman, serif;"><b>Driven My Heart</b></h2>
+    </center>
+
+    <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;">
+        <div style="background: #F0C1E1; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); width: 150px; padding: 20px; text-align: center;">
+            <img src="images/mona-lisa.png" style="width: 60px; height: 60px;">
+            <p style="font-size: 18px; font-weight: bold; margin: 0; color:#6A1E55">Arts</p>
+        </div>
+        <div style="background: #F0C1E1; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); width: 150px; padding: 20px; text-align: center;">
+            <img src="images/makeover.png" style="width: 60px; height: 60px;">
+            <p style="font-size: 18px; font-weight: bold; margin: 0; color:#6A1E55">Makeover</p>
+        </div>
+        <div style="background: #F0C1E1; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); width: 150px; padding: 20px; text-align: center;">
+            <img src="images/microwave-oven.png" style="width: 60px; height: 60px;">
+            <p style="font-size: 18px; font-weight: bold; margin: 0; color:#6A1E55">Baking</p>
+        </div>
+    </div>
+
+<section style="padding: 40px; text-align: center;">
+    <h2 style="color: #640D5F;">Fun Facts About Me</h2>
+    <ul style="list-style: none; padding: 0; margin: 20px auto; max-width: 600px; color: #561C24;">
+        <li style="margin: 10px 0;">🌟 I keep baking in smallest portion to the point my family bring up about it to this day</li>
+        <li style="margin: 10px 0;">🎨 I have a passion in art but didn't have the chance for it.</li>
+        <li style="margin: 10px 0;">🌍 Dreaming of traveling to Scotland and New Zealand one day.</li>
+        <li style="margin: 10px 0;">🧸 Everyone's first impression of me is that I always look unapproachable and am surprised when they start to get to know me.</li>
+    </ul>
+</section>
+
+<div style="padding: 5px 0; text-align: center; display: flex; justify-content: center; gap: 20px;">
+    <marquee behavior="scroll" direction="right" style="font-size: 1.2em; padding-bottom: 0px;">
+        <img src="gif/hearts.gif" alt="Scrolling GIF" style="width: 150px; height: auto;"/>
+    </marquee>
+    <marquee behavior="scroll" direction="right" style="font-size: 1.2em; padding-bottom: 0px;">
+        <img src="gif/hearts.gif" alt="Scrolling GIF" style="width: 150px; height: auto;"/>
+    </marquee>
+    <marquee behavior="scroll" direction="right" style="font-size: 1.2em; padding-bottom: 0px;">
+        <img src="gif/hearts.gif" alt="Scrolling GIF" style="width: 150px; height: auto;"/>
+    </marquee>
+    <marquee behavior="scroll" direction="right" style="font-size: 1.2em; padding-bottom: 0px;">
+        <img src="gif/hearts.gif" alt="Scrolling GIF" style="width: 150px; height: auto;"/>
+    </marquee>
+    <marquee behavior="scroll" direction="right" style="font-size: 1.2em; padding-bottom: 0px;">
+        <img src="gif/hearts.gif" alt="Scrolling GIF" style="width: 150px; height: auto;"/>
+    </marquee>
+</div>
+
+
+
+</div>
+
+
+<footer style="text-align: center; padding: 20px;">
+    <p style="font-size: 1.2em; color: #333;">&copy; 2024 Anis's Website | Made with ♡</p>
+</footer>
+
+
+
+</body>
+</html>
