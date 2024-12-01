@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meet the Family</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            background-image: url('images/bgimage4.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        /* Section title */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        /* Family section layout */
+        .family-section {
+            padding: 20px;
+        }
+
+        .family-cards {
+            display: flex; /* Makes the children display side by side */
+            flex-wrap: wrap; /* Allows wrapping to the next row if needed */
+            justify-content: center; /* Centers the content */
+            gap: 20px; /* Adds space between cards */
+        }
+
+        .family-card {
+            background-color: beige;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+            width: 200px; /* Card width */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .family-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .family-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .family-name {
+            font-size: 1.2rem;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        .family-role {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        #map {
+            height: 500px; 
+            width: 85%; 
+            margin: 20px auto; 
+            border: 1px solid #ccc; 
+            border-radius: 8px; 
+        }
+
+    </style>
+</head>
+
+<body>
+<section class="family-section">
+<center><h2 class="section-title" style="color: #E90074;">Meet the Family</h2></center>
+
+    <div class="family-cards">
+        <div class="family-card">
+            <img src="images/ayah.jpg" alt="Family Member 1" class="family-photo">
+            <h3 class="family-name">Ayah - Azlan</h3>
+            <p class="family-role">The one who is willing to listen to problems and never complain</p>
+        </div>
+        <div class="family-card">
+            <img src="images/mama.jpg" alt="Family Member 2" class="family-photo">
+            <h3 class="family-name">Mama - Anidah</h3>
+            <p class="family-role">Person with very high self-discipline and who I love the most</p>
+        </div>
+        <div class="family-card">
+            <img src="images/akak.jpg" alt="Family Member 3" class="family-photo">
+            <h3 class="family-name">Kakak - Amera</h3>
+            <p class="family-role">Good cooker</p>
+        </div>
+        <div class="family-card">
+            <img src="images/abang.jpg" alt="Family Member 4" class="family-photo">
+            <h3 class="family-name"> Abang - Akmar </h3>
+            <p class="family-role">Caring</p>
+        </div>
+        <div class="family-card">
+            <img src="images/acik.jpg" alt="Family Member 5" class="family-photo">
+            <h3 class="family-name">Acik- Aina</h3>
+            <p class="family-role">The listener</p>
+        </div>
+        <div class="family-card">
+            <img src="images/baman.jpg" alt="Family Member 6" class="family-photo">
+            <h3 class="family-name">Baman - Aiman</h3>
+            <p class="family-role">The Entertainer/Clown Of The Family</p>
+        </div>
+        <div class="family-card">
+            <img src="images/mee.jpg" alt="Family Member 7" class="family-photo">
+            <h3 class="family-name">Anis</h3>
+            <p class="family-role">The Princess in The Family</p>
+        </div>
+    </div>
+</section>
+
+<section>
+<center><h2 class="section-title" style="color: #E90074;">Our Family Life Journey</h2></center>
+    <div id="map"></div>
+</section>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    // Initialize the map
+    const map = L.map('map').setView([3.139, 101.686], 6); // Default to Malaysia view
+
+    // Add a tile layer (OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Family journey markers
+    const locations = [
+        { coords: [2.748, 102.254], popup: "<b>Negeri Sembilan</b><br>Our family started here in 1980." },
+        { coords: [3.141, 101.765], popup: "<b>Ampang</b><br>A wonderful visit in 2018 to reconnect with family." },
+        { coords: [3.073, 101.518], popup: "<b>Shah Alam</b><br>We moved here in 1990 for a fresh start." },
+        { coords: [3.033, 101.447], popup: "<b>Klang</b><br>A memorable chapter in 2005." },
+        { coords: [2.757, 102.086], popup: "<b>Senawang</b><br>A wonderful visit in 2018 to reconnect with family." }
+    ];
+
+    // Add markers for each location
+    locations.forEach(location => {
+        L.marker(location.coords).addTo(map).bindPopup(location.popup);
+    });
+
+    // Connect locations with a polyline
+    const journeyPath = locations.map(location => location.coords);
+    L.polyline(journeyPath, { color: 'blue' }).addTo(map).bindPopup("Our family's journey path.");
+</script>
+
+<center><h2 style="background-color: #FFE3E3; color: #E90074; padding: 10px;">Meet my nieces</h2></center>
+
+<div class="video-container">
+    <div class="video-wrapper">
+        <video controls style="display: block; margin: 0 auto;">
+            <source src="video/slides1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+<style>
+    .video-container {
+        text-align: center; /* Ensures video is centered */
+        margin-top: 20px; /* Adds some space between the heading and the video */
+    }
+
+    .video-wrapper {
+        max-width: 100%; /* Prevents the video from overflowing */
+        width: 80%; /* You can adjust the width if needed */
+        margin: 0 auto; /* Centers the video container */
+    }
+
+    video {
+        width: 100%; /* Makes the video responsive */
+        max-width: 500px; /* Maximum width of the video */
+        height: auto; /* Maintains aspect ratio */
+    }
+</style>
+
+<section style="padding: 40px; text-align: center;">
+    <h2 style="color: #D63484;">Aurora Alesya ꕥ</h2>
+    <ul style="list-style: none; padding: 0; margin: 20px auto; max-width: 600px; color: #561C24;">
+        <li style="margin: 10px 0;">🌌 Aurora, the radiant light that emerged after the darkness, illuminating my world and making her the beacon of my life.</li>
+        <li style="margin: 10px 0;">🎀 She is the beloved firstborn in our family, the spark that ignited a journey of love and joy.</li>
+        <li style="margin: 10px 0;">🕯️ Her smile lights up any room, and her laughter is like music that fills the air with joy. She has a heart full of warmth, always spreading kindness to everyone she meets.</li>
+        <li style="margin: 10px 0;">💋 Love her so much i cry every single time we have to seperata facing the reality be around her makes me feel like a dream.</li>
+    </ul>
+</section>
+
+<div class="video-container">
+    <div class="video-wrapper">
+        <video controls style="display: block; margin: 0 auto;">
+            <source src="video/slides2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+<style>
+    .video-container {
+        text-align: center; /* Ensures video is centered */
+        margin-top: 20px; /* Adds some space between the heading and the video */
+    }
+
+    .video-wrapper {
+        max-width: 100%; /* Prevents the video from overflowing */
+        width: 80%; /* You can adjust the width if needed */
+        margin: 0 auto; /* Centers the video container */
+    }
+
+    video {
+        width: 100%; /* Makes the video responsive */
+        max-width: 500px; /* Maximum width of the video */
+        height: auto; /* Maintains aspect ratio */
+    }
+</style>
+
+<section style="padding: 40px; text-align: center;">
+    <h2 style="color: #D63484;">Ayra ღ</h2>
+    <ul style="list-style: none; padding: 0; margin: 20px auto; max-width: 600px; color: #561C24;">
+        <li style="margin: 10px 0;">🍒 Her name, Ayra, means noble—just like the pure and graceful vibe she gives off.</li>
+        <li style="margin: 10px 0;">🎀 She is our lovely second-born in our family, lights up our life with her presence.</li>
+        <li style="margin: 10px 0;">🕯️ She is is like a treasure chest, overflowing with giggles, love, and a happiness that fills my heart to the brim.</li>
+        <li style="margin: 10px 0;">💋 Hoping for bright future and bond grow stronger as shes growing up .</li>
+    </ul>
+</section>
+
+   
